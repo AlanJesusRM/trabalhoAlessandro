@@ -1,14 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entrada</title>
     <link rel="stylesheet" href="../styles/auth.css" />
+    <script src="../scripts/auth.js" defer></script>
   </head>
   <body>
     <main class="main">
-      <form method="POST" class="form">
+      <form method="POST" class="form" id="login">
         <h1 class="title">LOGIN</h1>
         <input
           type="text"
@@ -26,11 +27,16 @@
           required
           placeholder="Senha"
         />
-        <button class="button">Entrar</button>
-        <button class="link">Não tenho conta</button>
+        <button class="button" id="btnEntrar">Entrar</button>
+        <button
+          class="link"
+          onclick="login.style.display='none'; cadastrar.style.display='flex';"
+        >
+          Não tenho conta
+        </button>
       </form>
 
-      <form method="POST" class="form">
+      <form method="POST" class="form" id="cadastrar">
         <h1 class="title">CADASTRO</h1>
         <input
           type="text"
@@ -72,10 +78,18 @@
             name="check"
             value="checked"
           />
-          <label for="check" class="label">Concordo com os termos</label>
+          <label for="check" class="label">Concordo com os termos</label></br>
+          <span id="msg"></span>
         </div>
-        <button class="button">Cadastrar</button>
-        <button class="link">Já tenho conta</button>
+        <button class="button" id="btnCadastrar" onclick="return validar()">
+          Cadastrar
+        </button>
+        <button
+          class="link"
+          onclick="cadastrar.style.display='none'; login.style.display='flex';"
+        >
+          Já tenho conta
+        </button>
       </form>
     </main>
   </body>
