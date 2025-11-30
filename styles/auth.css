@@ -21,6 +21,10 @@
   width: 27rem;
 }
 
+.form::selection {
+  background-color: var(--green-300);
+}
+
 .title {
   font-family: "Gasoek One", sans-serif;
   font-size: 2rem;
@@ -41,6 +45,11 @@
   border-radius: 0.5rem;
   border: 0.125rem solid var(--white-100);
   color: var(--green-100);
+}
+
+.input::placeholder {
+  font-weight: bold;
+  color: var(--white-100);
 }
 
 .input:focus {
