@@ -12,7 +12,7 @@
         <h1 class="title">LOGIN</h1>
         <input
           type="text"
-          id="name"
+          name="name"
           class="input"
           maxlength="30"
           required
@@ -20,7 +20,7 @@
         />
         <input
           type="password"
-          id="password"
+          name="password"
           class="input"
           maxlength="30"
           required
@@ -28,6 +28,54 @@
         />
         <button class="button">Entrar</button>
         <button class="link">Não tenho conta</button>
+      </form>
+
+      <form method="POST" class="form">
+        <h1 class="title">CADASTRO</h1>
+        <input
+          type="text"
+          name="name-cad"
+          class="input"
+          maxlength="30"
+          required
+          placeholder="Nome"
+        />
+        <input
+          type="password"
+          name="password-cad"
+          class="input"
+          maxlength="30"
+          required
+          placeholder="Senha"
+        />
+        <input
+          type="password"
+          name="password-confirm-cad"
+          class="input"
+          maxlength="30"
+          required
+          placeholder="Confirme a senha"
+        />
+        <input
+          type="text"
+          name="contact"
+          class="input"
+          maxlength="30"
+          required
+          placeholder="Telefone"
+        />
+        <div class="term">
+          <input
+            type="checkbox"
+            class="check"
+            id="check"
+            name="check"
+            value="checked"
+          />
+          <label for="check" class="label">Concordo com os termos</label>
+        </div>
+        <button class="button">Cadastrar</button>
+        <button class="link">Já tenho conta</button>
       </form>
     </main>
   </body>
