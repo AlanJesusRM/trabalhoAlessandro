@@ -32,7 +32,10 @@
         <button class="button" id="btnEntrar">Entrar</button>
         <button
           class="link"
-          onclick="login.style.display='none'; cadastrar.style.display='flex';"
+          onclick="
+            login.style.display = 'none';
+            cadastrar.style.display = 'flex';
+          "
         >
           Não tenho conta
         </button>
@@ -86,19 +89,35 @@
             name="check"
             value="checked"
           />
-          <label for="check" class="label">Concordo com os termos</label></br>
+          <label for="check" class="label">Concordo com os</label
+          ><button type="button" class="terms-button" onclick="openModal()">
+            Termos
+          </button>
         </div>
         <span id="msg" class="msg displayNone"></span>
-        <button class="button" id="btnCadastrar" onclick="return validateForm()">
+        <button
+          class="button"
+          id="btnCadastrar"
+          onclick="return validateForm();"
+        >
           Cadastrar
         </button>
         <button
           class="link"
-          onclick="cadastrar.style.display='none'; login.style.display='flex';"
+          onclick="
+            cadastrar.style.display = 'none';
+            login.style.display = 'flex';
+          "
         >
           Já tenho conta
         </button>
       </form>
+      <div id="modalTerms" class="modal">
+        <div class="modal-content">
+          <h2 class="title-term">TERMOS DE USO</h2>
+          <div class="terms-text"></div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

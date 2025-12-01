@@ -110,3 +110,12 @@ if (contactInput) {
     contactInput.dispatchEvent(new Event("input"));
   });
 }
+
+function openModal() {
+  document.getElementById("modalTerms").style.display = "flex";
+}
+
+window.onclick = (e) => {
+  const modal = document.getElementById("modalTerms");
+  if (e.target === modal) modal.style.display = "none";
+};
