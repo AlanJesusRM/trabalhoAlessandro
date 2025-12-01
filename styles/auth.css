@@ -80,6 +80,10 @@
   color: var(--white-100);
 }
 
+.msg {
+  color: var(--red-300);
+}
+
 .button {
   width: 100%;
   padding: 1rem;
@@ -105,4 +109,8 @@
 
 .link:hover {
   color: var(--green-300);
+}
+
+.displayNone {
+  display: none;
 }
